@@ -2,7 +2,7 @@ import { fetchAnimeById } from '@/app/action'
 import { Suspense } from 'react'
 
 export interface Params {
-  [param: string]: any
+  id: number
 }
 
 type Props = {
@@ -20,7 +20,7 @@ async function Anime({ id }: Props) {
   )
 }
 
-async function Page({ params }: Params) {
+async function Page(params: Params) {
   const { id } = params
 
   return (
