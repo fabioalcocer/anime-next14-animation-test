@@ -1,5 +1,5 @@
-import LoadMore from '../components/LoadMore'
-import { fetchAnime } from './action'
+import { fetchAnime } from '../action'
+import LoadMore from '../../components/LoadMore'
 // import { data } from './_data'
 
 async function Home() {

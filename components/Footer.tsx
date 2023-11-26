@@ -7,7 +7,7 @@ function Footer() {
         @2023 Created by: Fabio Alcocer
       </p>
       <Image
-        src='./logo.svg'
+        src='/logo.svg'
         alt='logo'
         width={47}
         height={44}
@@ -15,7 +15,7 @@ function Footer() {
       />
       <div className='flex items-center gap-6'>
         <Image
-          src='./twitter.svg'
+          src='/twitter.svg'
           alt='logo'
           width={19}
           height={19}
