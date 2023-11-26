@@ -61,7 +61,7 @@ function AnimeCard({ anime, index }: Prop) {
           <div className='flex gap-4 items-center'>
             <div className='flex flex-row gap-2 items-center'>
               <Image
-                src='./episodes.svg'
+                src='/episodes.svg'
                 alt='episodes'
                 width={20}
                 height={20}
@@ -73,7 +73,7 @@ function AnimeCard({ anime, index }: Prop) {
             </div>
             <div className='flex flex-row gap-2 items-center'>
               <Image
-                src='./star.svg'
+                src='/star.svg'
                 alt='star'
                 width={18}
                 height={18}
