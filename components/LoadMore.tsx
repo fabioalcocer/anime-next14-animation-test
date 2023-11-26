@@ -15,12 +15,12 @@ function LoadMore() {
   const [data, setData] = useState<AnimeCard[]>([])
 
   useEffect(() => {
-    // if (inView) {
-    //   fetchAnime(page).then((res) => {
-    //     setData([...data, ...res])
-    //     page++
-    //   })
-    // }
+    if (inView) {
+      fetchAnime(page).then((res) => {
+        setData([...data, ...res])
+        page++
+      })
+    }
   }, [inView, data])
 
   return (

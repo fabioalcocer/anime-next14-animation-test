@@ -18,7 +18,5 @@ export const fetchAnimeById = async (animeId: number) => {
   )
 
   const data = await response.json()
-  console.log(data)
-
   return data
 }
