@@ -13,7 +13,7 @@ async function Anime({ id }: { id: number }) {
   const anime = await fetchAnimeById(id)
 
   const videoUrl = anime.videos[0]?.player_url as string
-  const validVideoUrl = videoUrl.replace('http', 'https') || ''
+  const validVideoUrl = videoUrl?.replace('http', 'https') || ''
 
   return (
     <div className='h-auto flex flex-col bg-[#1a1e27] p-6 px-4 md:px-10 text-slate-200 rounded-xl'>
@@ -75,7 +75,7 @@ function Page({ params: { id } }: PageProps) {
       <Suspense
         fallback={
           <div className='h-auto flex flex-col bg-[#1a1e27] p-6 px-4 md:px-10 text-slate-200 rounded-xl'>
-            <h1>Loading...</h1>
+            <p className='text-2xl font-bold'>Loading...</p>
           </div>
         }
       >
