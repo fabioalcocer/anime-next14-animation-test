@@ -52,40 +52,29 @@ export default function Modal({
   }, [onKeyDown])
 
   return (
-    <MotionDiv
-      variants={variants}
-      initial={'hidden'}
-      animate={'visible'}
-      transition={{
-        ease: 'ease',
-        duration: 0.3,
-      }}
-      viewport={{ amount: 0 }}
+    <div
+      ref={overlay}
+      className='fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60'
+      onClick={onClick}
     >
       <div
-        ref={overlay}
-        className='fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black/60'
-        onClick={onClick}
+        ref={wrapper}
+        className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2 p-6'
       >
         <div
-          ref={wrapper}
-          className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2 p-6'
+          className='absolute right-10 sm:right-16 top-10 ml-auto'
+          onClick={onDismiss}
         >
-          <div
-            className='absolute right-10 sm:right-16 top-10 ml-auto'
-            onClick={onDismiss}
-          >
-            <Image
-              src='/cross.svg'
-              alt='logo'
-              width={36}
-              height={36}
-              className='cursor-pointer'
-            />
-          </div>
-          {children}
+          <Image
+            src='/cross.svg'
+            alt='logo'
+            width={36}
+            height={36}
+            className='cursor-pointer'
+          />
         </div>
+        {children}
       </div>
-    </MotionDiv>
+    </div>
   )
 }
