@@ -26,7 +26,7 @@ const variants = {
 
 function AnimeCard({ anime, index }: Prop) {
   return (
-    <Link scroll={false} href={`/animes/${anime.id}`}>
+    <Link scroll={false} href={`/${anime.id}`}>
       <MotionDiv
         variants={variants}
         initial={'hidden'}

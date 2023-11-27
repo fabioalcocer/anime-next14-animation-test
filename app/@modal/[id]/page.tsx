@@ -58,7 +58,7 @@ async function Anime({ id }: { id: number }) {
         <iframe
           title={anime.name}
           className='w-full h-full'
-          src={anime.videos[0].player_url}
+          src={anime.videos[0]?.player_url || ''}
           allowFullScreen
         />
       </div>
